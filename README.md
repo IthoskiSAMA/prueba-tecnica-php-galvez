@@ -53,7 +53,7 @@ UserTest: Pruebas unitarias para la clase User.
 UserRepositoryTest: Pruebas de integración para InMemoryUserRepository, incluyendo el manejo de excepciones.
 SaveUserUseCaseTest: Pruebas unitarias para el caso de uso SaveUserUseCase.
 
-![image](https://github.com/user-attachments/assets/b5cdeb54-fb91-4481-b287-2fa9957d5926)
+![image](https://github.com/user-attachments/assets/065ea1cf-aac2-4a66-8db0-1f0621dbf048)
 
 Ejecución de Pruebas
 Para ejecutar todas las pruebas, utiliza el siguiente comando:
