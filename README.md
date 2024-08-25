@@ -35,7 +35,7 @@ prueba-tecnica-php-eduardo/
 3. **Ejecuta las pruebas para asegurarte de que todo funciona correctamente:**
 
    ```bash
-   ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+   vendor\bin\phpunit --bootstrap vendor\autoload.php tests
 
 **Detalles Técnicos**
 1. **Entidades y Repositorios**
@@ -56,5 +56,8 @@ Ejecución de Pruebas
 Para ejecutar todas las pruebas, utiliza el siguiente comando:
 
 ```bash
-./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+vendor\bin\phpunit --bootstrap vendor\autoload.php tests
+
+![image](https://github.com/user-attachments/assets/807b16f7-6d35-4dfc-9a29-5dfeb7422505)
+
 
