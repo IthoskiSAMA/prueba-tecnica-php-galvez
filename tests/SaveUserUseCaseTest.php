@@ -6,13 +6,13 @@ use PHPUnit\Framework\TestCase;
 
 class SaveUserUseCaseTest extends TestCase
 {
-    // Se declara una instancia del repositorio de usuarios en memoria
+    // Se declara una variable para el repositorio de usuarios en memoria
     private InMemoryUserRepository $userRepository;
     
-    // Se declara una instancia del caso de uso para guardar usuarios
+    // Se declara una variable para el caso de uso de guardar usuarios
     private SaveUserUseCase $saveUserUseCase;
 
-    // Método que se ejecuta antes de cada prueba
+    // Método que se ejecuta antes de cada prueba para configurar el entorno
     protected function setUp(): void
     {
         // Se inicializa el repositorio de usuarios en memoria
@@ -22,25 +22,24 @@ class SaveUserUseCaseTest extends TestCase
         $this->saveUserUseCase = new SaveUserUseCase($this->userRepository);
     }
 
-    // Método de prueba que verifica que se guarda un usuario
+    // Método de prueba que verifica que se guarda un usuario correctamente
     public function testExecuteSavesUser(): void
     {
-        // Se define un arreglo de datos del usuario a guardar
+        // Se define un arreglo con los datos del usuario a guardar
         $request = [
-            'id' => '1',
-            'name' => 'Eduardo Galvez',
-            'email' => 'egalvez@example.com',
-            'password' => 'password123',
+            'id' => '1', // ID del usuario
+            'name' => 'Eduardo Galvez', // Nombre del usuario
+            'email' => 'egalvez@example.com', // Correo electrónico del usuario
+            'password' => 'password123', // Contraseña del usuario
         ];
 
         // Se ejecuta el caso de uso para guardar el usuario
         $this->saveUserUseCase->execute($request);
 
-        // Se busca el usuario guardado por su ID
+        // Se busca el usuario guardado en el repositorio por su ID
         $savedUser = $this->userRepository->findById('1');
         
-        // Se verifica que el nombre del usuario guardado es el esperado
+        // Se verifica que el nombre del usuario guardado coincide con el esperado
         $this->assertEquals('Eduardo Galvez', $savedUser->getName());
     }
 }
-
